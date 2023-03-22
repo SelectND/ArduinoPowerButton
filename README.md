@@ -24,6 +24,8 @@ Load the .ino file on your Arduino board
 </ul>
 
 ## Usage
+0. You can set your PIN in the "PowerButton.ino" file. Look out for the comments for where you can set the PIN.
+
 1. Connect the jumper cables to your PC's power button headers and make sure that the one end is connected to the "COM" port on the relay and the other end is connected to the "NO" (normally open) port on the relay.
 
 2. Connect all devices to the Arduino board as shown.
