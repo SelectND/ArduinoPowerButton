@@ -26,7 +26,6 @@ LiquidCrystal_I2C lcd(0x27, 16, 2); // "0x27" is the HEX address - replace if it
 void reset() {
   delay(4000);
   index = 0;
-  index--;
   for(int i = 0; i < pwLen; i++) {
     pw[i] = ' ';
   }
@@ -39,7 +38,6 @@ void reset() {
 
 
 void setup() {
-  Serial.begin(9600);
   lcd.init();
   lcd.backlight();
 
@@ -55,9 +53,6 @@ void loop() {
     lcd.setCursor(index, 1);
     lcd.print(pw[index]);
     index++;
-    Serial.print("Pressed key ");
-    Serial.print(button);
-    Serial.println();
   }
   if(index == pwLen) {
     int size = strlen(pw);
@@ -78,6 +73,5 @@ void loop() {
       lcd.print("           ");
       reset();
     }
-    index++;
   }
 }
